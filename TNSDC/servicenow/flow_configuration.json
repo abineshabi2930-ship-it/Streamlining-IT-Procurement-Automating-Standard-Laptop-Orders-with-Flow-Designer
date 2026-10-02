@@ -1,0 +1,35 @@
+{
+  "project": "Streamlining IT Procurement",
+  "flow_name": "Standard laptop task",
+  "application": "Global",
+  "run_as": "System User",
+  "trigger": {
+    "type": "Service Catalog"
+  },
+  "actions": [
+    {
+      "type": "Create Catalog Task",
+      "request_item": "Requested Item Record",
+      "table": "Catalog Task",
+      "fields": {
+        "short_description": "Laptop need to Configured",
+        "description": "Laptop need to Configured",
+        "assignment_group": "Hardware",
+        "approval": "Approved"
+      }
+    }
+  ],
+  "catalog_item": "Standard Laptop",
+  "test_path": [
+    "Service Catalog",
+    "Hardware",
+    "Standard Laptop",
+    "Order Now",
+    "Request Number",
+    "Approvers",
+    "Approve",
+    "Requested Item",
+    "Catalog Tasks"
+  ],
+  "note": "Configuration blueprint derived from the project document; not a native ServiceNow export/update-set file."
+}
